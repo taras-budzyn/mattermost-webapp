@@ -408,23 +408,6 @@ export default class SidebarRightMenu extends React.PureComponent {
         }
 
         let nativeAppLink = null;
-        if (this.props.appDownloadLink && !UserAgent.isMobileApp()) {
-            nativeAppLink = (
-                <li>
-                    <a
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        href={useSafeUrl(this.props.appDownloadLink)}
-                    >
-                        <i className='icon fa fa-mobile'/>
-                        <FormattedMessage
-                            id='sidebar_right_menu.nativeApps'
-                            defaultMessage='Download Apps'
-                        />
-                    </a>
-                </li>
-            );
-        }
 
         let addUsersToTeamModal;
         if (this.state.showAddUsersToTeamModal) {
@@ -517,18 +500,6 @@ export default class SidebarRightMenu extends React.PureComponent {
                         {helpLink}
                         {reportLink}
                         {nativeAppLink}
-                        <li>
-                            <a
-                                href='#'
-                                onClick={this.handleAboutModal}
-                            >
-                                <i className='icon fa fa-info'/>
-                                <FormattedMessage
-                                    id='navbar_dropdown.about'
-                                    defaultMessage='About Mattermost'
-                                />
-                            </a>
-                        </li>
                         <li className='divider'/>
                         <li>
                             <a

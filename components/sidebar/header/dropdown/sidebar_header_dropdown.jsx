@@ -511,23 +511,6 @@ export default class SidebarHeaderDropdown extends React.PureComponent {
         }
 
         let nativeAppLink = null;
-        if (this.props.appDownloadLink && !UserAgent.isMobileApp()) {
-            nativeAppLink = (
-                <li>
-                    <a
-                        id='nativeAppLink'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        href={useSafeUrl(this.props.appDownloadLink)}
-                    >
-                        <FormattedMessage
-                            id='navbar_dropdown.nativeApps'
-                            defaultMessage='Download Apps'
-                        />
-                    </a>
-                </li>
-            );
-        }
 
         let teamMembersModal;
         if (this.state.showTeamMembersModal) {
@@ -676,7 +659,6 @@ export default class SidebarHeaderDropdown extends React.PureComponent {
                     {keyboardShortcuts}
                     {reportLink}
                     {nativeAppLink}
-                    {about}
                     {logoutDivider}
                     {logout}
                     {teamMembersModal}

@@ -123,7 +123,7 @@ export default class SystemNotice extends React.PureComponent {
             >
                 <div className='system-notice__header'>
                     <div className='system-notice__logo'>
-                        <img width="36" height="36" src="images/main_small_icon.png">
+                        <img width="36" height="36" src="images/main_small_icon.png" />
                     </div>
                     <div className='system-notice__title'>
                         {notice.title}

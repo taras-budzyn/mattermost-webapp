@@ -187,14 +187,6 @@ export default class TutorialIntroScreens extends React.Component {
                         defaultMessage='Communication happens in public discussion channels, private channels and direct messages.'
                     />
                 </p>
-                <p>
-                    <FormattedMessage
-                        id='tutorial_intro.screenTwo.body2'
-                        defaultMessage='Everything is archived and searchable from any web-enabled desktop, laptop or phone.'
-                    />
-                </p>
-                {appDownloadLink}
-                {appDownloadImage}
                 {circles}
             </div>
         );
